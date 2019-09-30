@@ -15,7 +15,7 @@ hangman
 Copyright
 Copyright 2019 Albina Munirova. See [license] for details.
 
-[license]: LICENSE.txt
+[license]: LICENSE
 [travis-url]: https://travis-ci.org/shkurak/hangman
 [travis-badge]: https://travis-ci.org/shkurak/hangman.svg?branch=master
 [coverage-image]: https://codecov.io/gh/shkurak/hangman/branch/master/graph/badge.svg
