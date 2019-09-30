@@ -12,6 +12,7 @@ Hangman is a paper and pencil guessing game for two or more players. One player 
 # Run
 hangman
 
+
 Copyright
 Copyright 2019 Albina Munirova. See [license] for details.
 
