@@ -2,8 +2,10 @@ language: python
 python:
   - 3.5
 install:
+  - pip install codecov
   - pip3 install codecov
-  - pip3 install pytest-cov
+  - pip3 install cov cov-report
+  - pip3 install pytest-pep8
 script:
   - ./setup.py test
 after_success:
