@@ -7,7 +7,7 @@ from mock import patch
 def test_iteration():
 
     # test_1
-    captured_output = io.StringIO.StringIO()
+    captured_output = io.StringIO()
     sys.stdout = captured_output
     new_game = Game()
 
@@ -16,7 +16,7 @@ def test_iteration():
         perm_mock.return_value = 'r'
         new_game.word = 'car'
         new_game.missed = 3
-        new_game.letters = {'c','a'}
+        new_game.letters = {'c', 'a'}
         new_game.iteration()
 
     sys.stdout = sys.__stdout__
@@ -26,7 +26,7 @@ def test_iteration():
     assert new_game.letters == {'c', 'a'}
 
     # test_2
-    captured_output = io.StringIO.StringIO()
+    captured_output = io.StringIO()
     sys.stdout = captured_output
     new_game = Game()
 
@@ -35,7 +35,7 @@ def test_iteration():
         perm_mock.return_value = 'e'
         new_game.word = 'bird'
         new_game.missed = 4
-        new_game.letters = {'b','i','r'}
+        new_game.letters = {'b', 'i', 'r'}
         new_game.iteration()
 
     sys.stdout = sys.__stdout__
@@ -44,4 +44,4 @@ def test_iteration():
 
     assert captured_output.getvalue() == printed_str
     assert new_game.missed == 5
-    assert new_game.letters == {'k', 'e'}
+    assert new_game.letters == {'b', 'i', 'r'}
