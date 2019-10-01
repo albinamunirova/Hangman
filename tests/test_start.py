@@ -1,4 +1,4 @@
-from hangman import start
+from game import start
 from mock import patch
 
 
