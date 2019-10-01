@@ -4,7 +4,6 @@ python:
 install:
   - pip install codecov
   - pip3 install codecov
-  - pip3 install cov cov-report
   - pip3 install pytest-pep8
 script:
   - ./setup.py test
