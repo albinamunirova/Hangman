@@ -1,3 +1,5 @@
+"""This module starts the game"""
+
 import game
 
 
