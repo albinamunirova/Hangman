@@ -1,9 +1,9 @@
 import random
 
 
-class Game(object):
+class Game():
 
-    def __init__ (self):
+    def __init__(self):
         self._max_mistakes = 5
         self._flag_guessed = False
         self._words = ['love', 'program', 'architecture']
