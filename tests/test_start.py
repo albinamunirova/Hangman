@@ -1,7 +1,7 @@
 """This module tests the start of the game"""
 
-from game import start
 from mock import patch
+from game import start
 
 
 def test_start():
