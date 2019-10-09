@@ -13,7 +13,7 @@ class Game():
         self._words = ['love', 'program', 'architecture']
 
     def play(self):
-
+        """This is the main play function"""
         hidden_word = random.choice(self._words)
 
         mistakes = 0
@@ -40,6 +40,9 @@ class Game():
                 else:
                     print("*", end="")
             print()
+        print_end()
+            
+    def print_end():
         if self._flag_guessed:
             print("You won!")
         else:
