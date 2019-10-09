@@ -1,6 +1,6 @@
 """This module tests the main function"""
-from game import main, Game
 from mock import patch
+from game import main, Game
 
 
 def test_main():
