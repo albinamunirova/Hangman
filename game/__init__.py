@@ -11,14 +11,15 @@ class Game():
         self._max_mistakes = 5
         self._flag_guessed = False
         self._words = ['love', 'program', 'architecture']
+        self.hidden_word = None
 
     def play(self):
         """This is the main play function"""
-        hidden_word = random.choice(self._words)
+        self.hidden_word = random.choice(self._words)
 
         mistakes = 0
         guessed_letters = set()
-        needed_letters = set(hidden_word)
+        needed_letters = set(self.hidden_word)
 
         while mistakes < self._max_mistakes and not self._flag_guessed:
             print("Guess a letter:")
@@ -33,7 +34,7 @@ class Game():
                 max_m = self._max_mistakes
                 print("Missed, mistake {} out of {}.".format(mistakes, max_m))
 
-            self.print_word()
+            self.print_word(guessed_letters)
             print()
 
         if self._flag_guessed:
@@ -41,15 +42,15 @@ class Game():
         else:
             print("You lost!")
 
-    def print_word(self):
+    def print_word(self, guessed_letters):
         """This function prints the word"""
 
-        print ("The word: ", end="")
-        for i in hidden_word:
+        print("The word: ", end="")
+        for i in self.hidden_word:
             if i in guessed_letters:
-                print (i, end="")
+                print(i, end="")
             else:
-                print ("*", end="")
+                print("*", end="")
 
 
 def main():
