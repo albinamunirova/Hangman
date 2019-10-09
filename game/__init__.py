@@ -47,6 +47,7 @@ class Game():
 
 
 def main():
+    """This function starts the game"""
     new_game = Game()
     new_game.play()
     return True
