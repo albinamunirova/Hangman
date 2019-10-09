@@ -1,3 +1,5 @@
+"""This module contains hangman game class and main function"""
+
 import random
 
 
