@@ -4,5 +4,6 @@ import game
 
 
 def main():
-    hm = game.main()
-    return hm
+    """This function starts the game"""
+    hangman = game.main()
+    return hangman
