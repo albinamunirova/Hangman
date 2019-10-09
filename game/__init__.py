@@ -40,9 +40,6 @@ class Game():
                 else:
                     print("*", end="")
             print()
-        print_end()
-            
-    def print_end():
         if self._flag_guessed:
             print("You won!")
         else:
