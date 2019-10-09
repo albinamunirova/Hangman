@@ -27,8 +27,8 @@ class Game():
                     self._flag_guessed = True
             else:
                 mistakes += 1
-                print("Missed, mistake {} out of {}.".format(mistakes, 
-                                                             self._max_mistakes))
+                max_m = self._max_mistakes
+                print("Missed, mistake {} out of {}.".format(mistakes, max_m))
 
             print("The word: ", end="")
             for i in hidden_word:
