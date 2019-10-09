@@ -33,17 +33,23 @@ class Game():
                 max_m = self._max_mistakes
                 print("Missed, mistake {} out of {}.".format(mistakes, max_m))
 
-            print("The word: ", end="")
-            for i in hidden_word:
-                if i in guessed_letters:
-                    print(i, end="")
-                else:
-                    print("*", end="")
+            self.print_word()
             print()
+
         if self._flag_guessed:
             print("You won!")
         else:
             print("You lost!")
+
+    def print_word(self):
+        """This function prints the word"""
+
+        print ("The word: ", end="")
+        for i in hidden_word:
+            if i in guessed_letters:
+                print (i, end="")
+            else:
+                print ("*", end="")
 
 
 def main():
