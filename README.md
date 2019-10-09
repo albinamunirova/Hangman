@@ -17,8 +17,8 @@ Copyright
 Copyright 2019 Albina Munirova. See [license] for details.
 
 [license]: LICENSE
-[travis-url]: https://travis-ci.org/shkurak/hangman
-[travis-badge]: https://travis-ci.org/shkurak/hangman.svg?branch=master
-[coverage-image]: https://codecov.io/gh/shkurak/hangman/branch/master/graph/badge.svg
-[coverage-url]: https://codecov.io/gh/shkurak/hangman
+[travis-url]: https://travis-ci.com/albinamunirova/Hangman
+[travis-badge]: https://travis-ci.com/albinamunirova/Hangman.svg?branch=master
+[coverage-image]: https://codecov.io/gh/albinamunirova/Hangman/branch/master/graph/badge.svg
+[coverage-url]: https://codecov.io/gh/albinamunirova/Hangman
 [hangman]: https://en.wikipedia.org/wiki/Hangman_(game)
