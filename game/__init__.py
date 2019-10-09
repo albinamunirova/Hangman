@@ -22,14 +22,13 @@ class Game():
             if cur_letter in needed_letters:
                 guessed_letters.add(cur_letter)
                 print("Hit!")
-                
                 if guessed_letters == needed_letters:
                     self._flag_guessed = True
             else:
                 mistakes += 1
                 max_m = self._max_mistakes
                 print("Missed, mistake {} out of {}.".format(mistakes, max_m))
-
+                
             print("The word: ", end="")
             for i in hidden_word:
                 if i in guessed_letters:
@@ -37,7 +36,7 @@ class Game():
                 else:
                     print("*", end="")
             print()
-
+            
         if self._flag_guessed:
             print("You won!")
         else:
