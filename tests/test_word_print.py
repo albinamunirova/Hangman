@@ -1,9 +1,11 @@
+"""This module tests the word print"""
 import sys
 import io
 from game import Game
 
 
 def test_print_word():
+    """This function tests the word print"""
     captured_output = io.StringIO()
     sys.stdout = captured_output
     new_game = Game()
@@ -11,4 +13,4 @@ def test_print_word():
     guessed_letters = {'l', 'e'}
     new_game.print_word(guessed_letters)
     sys.stdout = sys.__stdout__
-    assert captured_output.getvalue() == 'The word: l**e\n'
+    assert captured_output.getvalue() == 'The word: l**e'
