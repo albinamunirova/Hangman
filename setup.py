@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.5
+#!/usr/bin/env python3
 
 """Setup script."""
 
@@ -28,13 +28,12 @@ setup(
         "pylint",
         "pycodestyle",
         "pep257",
-        "mock",
     ],
     classifiers=[
         "Development Status :: 1 - Planning",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.5.2",
+        "Programming Language :: Python :: 3",
     ],
     entry_points={
         'console_scripts': ['hangman=game.start:main'],

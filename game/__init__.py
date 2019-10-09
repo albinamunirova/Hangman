@@ -1,69 +1,49 @@
 import random
 
 
-def print_word(word, letters):
-    line = ''
-    for i in word:
-        if i in letters:
-            line += i
-        else:
-            line += '*'
-    print('The word:', line, '\n')
-
-
-def check(word, letters):
-    answer = True
-    for i in word:
-        if i not in letters:
-            answer = False
-    return answer
-
-
 class Game(object):
 
-    def __init__(self):
-
-        self.dictionary = ['hello', 'bird', 'car', 'table']
-        self.word = []
-        self.letters = set()
-
-        self.play_flg = True
-
-        self.mistakes = 5
-        self.missed = 0
-
-    def iteration(self):
-
-        letter = input()
-        self.letters.add(letter)
-
-        if letter in self.word:
-
-            print('Hit!\n')
-
-            if check(self.word, self.letters):
-                print_word(self.word, self.letters)
-                print('You won!')
-                self.play_flg = False
-        else:
-
-            self.missed += 1
-            print('Missed, mistake', self.missed, 'out of', self.mistakes, '\n')
-
-            if self.missed >= self.mistakes:
-                print_word(self.word, self.letters)
-                print('You lost!')
-                self.play_flg = False
+    def __init__ (self):
+        self._max_mistakes = 5
+        self._flag_guessed = False
+        self._words = ['love', 'program', 'architecture']
 
     def play(self):
 
-        self.word = random.choice(self.dictionary)
+        hidden_word = random.choice(self._words)
 
-        while self.play_flg:
-            print_word(self.word, self.letters)
-            print('Guess a letter:')
-            self.iteration()
+        mistakes = 0
+        guessed_letters = set()
+        needed_letters = set(hidden_word)
 
+        while mistakes < self._max_mistakes and not self._flag_guessed:
+            print("Guess a letter:")
+            cur_letter = input()
+            if cur_letter in needed_letters:
+                guessed_letters.add(cur_letter)
+                print("Hit!")
+
+                if cur_letter in needed_letters and cur_letter in guessed_letters:  # user enters some character several times
+                    pass
+
+                if guessed_letters == needed_letters:
+                    self._flag_guessed = True
+            else:
+                mistakes += 1
+                print("Missed, mistake {} out of {}.".format(mistakes, self._max_mistakes))
+
+            print("The word: ", end="")
+            for i in hidden_word:
+                if i in guessed_letters:
+                    print(i, end="")
+                else:
+                    print("*", end="")
+            print()
+
+        if self._flag_guessed:
+            print("You won!")
+        else:
+            print("You lost!")
 
 def main():
     new_game = Game()
